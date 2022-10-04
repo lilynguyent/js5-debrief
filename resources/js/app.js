@@ -8,3 +8,19 @@
 // 6. The application should be designed to be visually pleasing.
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-5).
 
+const firstNames = ["Amanda", "Christ", "LeRoy", "Mariana"];
+
+const secondNames = ["Mimi", "Giovanni", "Michael", "Ahmad"];
+
+const getRandomName = () => `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${secondNames[Math.floor(Math.random() * secondNames.length)]}`;
+
+console.log(getRandomName());
+
+
+const setRandomName = () => {
+    document.getElementById('random-name').innerText = getRandomName();
+}
+document.getElementById('generate')
+    .addEventListener('click', setRandomName);
+
+setRandomName();
